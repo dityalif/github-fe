@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="flex items-center space-x-3 ml-auto">
         <ul className="flex space-x-6 items-center font-semibold">
             <li className="transition duration-200 hover:text-gray-400 active:scale-90 cursor-pointer">
-                <Link to="/dmj">Sign In</Link>
+                <Link to="/">Sign In</Link>
             </li>
             <Button text="Sign Up"/>
         </ul>

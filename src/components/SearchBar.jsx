@@ -3,35 +3,26 @@ import React, { useState } from "react";
 export default function SearchBar({ placeholder, onSearch }) {
   const [query, setQuery] = useState("");
 
-  const handleInputChange = (e) => {
-    setQuery(e.target.value);
-  };
+  const handleInputChange = (e) => setQuery(e.target.value);
 
-  const handleSearch = () => {
-    if (onSearch) {
-      onSearch(query);
-    }
-  };
+  const handleSearch = () => onSearch && onSearch(query);
 
   return (
-    <div className="flex justify-center items-center py-6">
-      <div
-        className="backdrop-blur-md bg-white/30 items-center justify-between w-full max-w-4xl flex rounded-full shadow-lg p-4"
-      >
+    <div className="flex justify-center items-center py-6 w-1/3">
+      <div className="flex items-center w-full max-w-4xl bg-white/30 backdrop-blur-md rounded-3xl shadow-lg p-3">
         <input
-          className="font-bold uppercase rounded-full w-full py-3 px-6 text-gray-700 bg-transparent leading-tight focus:outline-none focus:shadow-outline lg:text-base text-sm placeholder-gray-400"
+          className="w-full p-2 text-sm lg:text-base font-bold bg-transparent text-white placeholder-gray-300 focus:outline-none"
           type="text"
           placeholder={placeholder}
           value={query}
           onChange={handleInputChange}
         />
-
-        <div
-          className="bg-[#4682B4] hover:bg-[#3B6E98] p-3 cursor-pointer mx-2 rounded-full"
+        <button
+          className="p-3 mx-2 bg-[#4682B4] transition-all duration-200 hover:bg-[#3B6E98] active:scale-95 text-white rounded-2xl"
           onClick={handleSearch}
         >
           <svg
-            className="w-6 h-6 text-white"
+            className="w-6 h-6"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
@@ -42,7 +33,7 @@ export default function SearchBar({ placeholder, onSearch }) {
               clipRule="evenodd"
             />
           </svg>
-        </div>
+        </button>
       </div>
     </div>
   );
