@@ -8,8 +8,9 @@ export default function SearchBar({ placeholder, onSearch }) {
   const handleSearch = () => onSearch && onSearch(query);
 
   return (
-    <div className="flex justify-center items-center py-6 w-1/3">
-      <div className="flex items-center w-full max-w-4xl bg-white/30 backdrop-blur-md rounded-3xl shadow-lg p-3">
+    <div className="flex justify-center items-center py-6 lg:w-1/3 sm:w-3/4">
+      <div className="flex items-center w-full max-w-4xl bg-white/30 backdrop-blur-md rounded-3xl shadow-lg p-3 border 
+      border-gray-400 transition-all duration-300 hover:shadow-lg hover:shadow-[#4682B4]  hover:bg-white/35"> 
         <input
           className="w-full p-2 text-sm lg:text-base font-bold bg-transparent text-white placeholder-gray-300 focus:outline-none"
           type="text"
