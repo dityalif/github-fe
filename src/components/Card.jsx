@@ -3,7 +3,7 @@ import React from "react";
 export default function Card({ imageSrc, title, description, buttonText, onButtonClick }) {
   return (
     <div className="relative flex flex-col rounded-xl bg-white/30 backdrop-blur-md text-white shadow-lg transform transition-all 
-    duration-300 group hover:-translate-x-10 border border-gray-400 hover:shadow-lg hover:shadow-[#4682B4] w-full sm:w-3/4 md:w-80 max-w-xs mx-auto mb-6">
+    duration-300 group lg:hover:-translate-x-10 border border-gray-400 hover:shadow-lg hover:shadow-[#4682B4] w-full sm:w-3/4 md:w-80 max-w-xs mx-auto mb-6">
       <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
         <img
           src={imageSrc}
