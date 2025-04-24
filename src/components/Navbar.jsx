@@ -51,7 +51,7 @@ export default function Navbar() {
       {isMenuOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-40"
-          onClick={toggleMenu} 
+          onClick={toggleMenu}
         ></div>
       )}
 
@@ -61,7 +61,7 @@ export default function Navbar() {
           isMenuOpen ? "block opacity-100 translate-y-0" : "hidden opacity-0 -translate-y-5"
         }`}
       >
-        <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 items-center font-normal p-4 md:p-0 text-white md:text-gray-300">
+        <ul className="flex lg:flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 items-center font-normal p-4 md:p-0 text-white md:text-gray-300">
           <li className="transition duration-200 hover:text-gray-400 active:scale-90 cursor-pointer">
             <Link to="/dmj">Product</Link>
           </li>
